@@ -16,11 +16,11 @@ class Project(models.Model):
 
 
 class TODO(models.Model):
-    project = models.OneToOneField(Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
     text = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
-    from_user = models.OneToOneField(User, on_delete=models.CASCADE)
+    from_user = models.ForeignKey(User, on_delete=models.CASCADE)
     is_active = models.BooleanField()
 
     def __str__(self):
