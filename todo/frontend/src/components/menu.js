@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+
 import 'bootstrap/dist/css/bootstrap.css'
 
 
@@ -10,12 +12,19 @@ const Menu = () => {
                 <h1 className="display-3">my 'ToDo'</h1> Menu:
                 <a className="nav-link" href='#'>Sign in</a>
                 <ul>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Calendar</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">About</a>
-                    </li>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to='/'>Users</Link>
+                            </li>
+                            <li>
+                                <Link to='/project'>Project</Link>
+                            </li>
+                            <li>
+                                <Link to='/todo'>ToDo</Link>
+                            </li>
+                        </ul>
+                    </nav>
                 </ul>
             </div>
         </div>
